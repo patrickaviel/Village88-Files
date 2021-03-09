@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    
+    background-color:black;
+}
+h3{
+    color:white;
+    font-family: 'DotGothic16', sans-serif;
+}
+h1{
+    color:white;
+    font-family: 'DotGothic16', sans-serif;
+    letter-spacing: 20px;
+    display: inline-block;
+}
+.row{
+    
+    padding:0;
+    height:20px;
+
+}
+.row div{
+    
+    width:20px;
+    height:20px;
+    display: inline-block;
+}
+/* CHARACTERS */
+#pacman{
+    width:20px;
+    height:20px;
+    background-image: url(images/pacman.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:absolute;
+}
+.brick{
+    width:20px;
+    height:20px;
+    margin:0;
+    padding:0;
+    background-color:blue;
+}
+.coins{
+    background-image: url(images/coin.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}   
+.empty{
+    background-color:black;
+}
+.ghost{
+    background-image: url(images/monster-red.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}   
+.cherry{
+    background-image: url(images/cherry.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
