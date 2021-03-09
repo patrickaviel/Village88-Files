@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+
+
+*{
+    margin:0;
+    border:0;
+}
+body{
+    background-color:black;
+}
+#container{
+    background: url('Images/bgv2.png');
+    width:1000px;
+    height:550px;
+}
+#hero{
+    background: url('Images/1942.gif');
+    background-position: -85px -180px;
+    width:28px;
+    height:28px;
+    position:absolute;
+}
+.enemy1{
+    background: url('Images/1942.gif');
+    background-position: -30px -10px;
+    width:28px;
+    height:28px;
+    position:absolute;
+}
+.bullet{
+    background: url('Images/1942.gif');
+    background-position: -185px -400px;
+    width:18px;
+    height:18px;
+    position:absolute;
+}
+#score{
+    position:absolute;
+    top:20px;
+    left:850px;
+    color:#f2f2f2;
+    font-size:20px;
+    font-family: 'Lekton', sans-serif;
+}
+#title{
+    position:absolute;
+    top:20px;
+    left:50px;
+    color:#f2f2f2;
+    font-size:20px;
+    font-family: 'Lekton', sans-serif;
+}

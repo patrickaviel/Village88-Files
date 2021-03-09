@@ -13,14 +13,33 @@ h3{
     color:white;
     font-family: 'DotGothic16', sans-serif;
 }
-h1{
-    color:white;
-    font-family: 'DotGothic16', sans-serif;
-    letter-spacing: 20px;
-    display: inline-block;
+
+img{
+    height:100px;
+    cursor:pointer;
+}
+audio{
+    display:none;
+}
+#go{
+    opacity: 0;
+}
+#world{
+   
+    height:20px;
+    top:160px;
+    left:440px;
+    position:absolute;
+}
+#banner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    position:absolute;
+    width:100%;
 }
 .row{
-    
     padding:0;
     height:20px;
 
@@ -45,7 +64,8 @@ h1{
     height:20px;
     margin:0;
     padding:0;
-    background-color:blue;
+    background-image: url(images/brick.png);
+    background-size: cover;
 }
 .coins{
     background-image: url(images/coin.gif);
@@ -64,4 +84,4 @@ h1{
     background-image: url(images/cherry.png);
     background-size: cover;
     background-repeat: no-repeat;
-}  
+} 

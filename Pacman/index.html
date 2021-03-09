@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>|| PACMAN ||</title>
+    <title>PACMAN</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/favicon" href="images/pacman-ico.ico"/>
+
 </head>
 <body>
     <div id="container">
         <div id="world"></div>
         <div id='pacman'></div>
     </div>
-    <div class="name">
-        <h1>PACMAN</h1>
-        <h3 id="score">Score:</h3>
+    <div id="banner">
+        <a href="index.html">
+            <img src="images/banner.png" alt="">
+        </a>
+        
+        <h3 id="score"></h3>
+        <h3 id="go">GAME OVER</h3>
     </div>
    
-       
+    <audio controls autoplay>
+        <source src="sounds/background-music.mp3" type="audio/mpeg">
+      </audio>
   
 <script src="script.js"></script>
 </body>
