@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:green;
+}
+#background{
+    background: url('images/frontyard.png');
+    width:1024px;
+    height:626px;
+}
+.banner{
+    cursor:pointer;
+    background-size: cover;
+    position: absolute;
+    top:0px;
+    left:1027px;
+}
+img{
+    height:240px;
+}
+.chFighter{
+    font-family: 'Bebas Neue', cursive;
+    font-size:30px;
+    position: absolute;
+    top:240px;
+    left:1030px;
+}
+.score{
+    z-index:0;
+    position: absolute;
+    top:0px;
+    left:880px;
+    
+}
+#scorer{
+    position:absolute;
+    font-size: 30px;
+    top:5px;
+    left:895px;
+    color:#f2f2f2;
+}
+.scoreboard{
+    height:50px;
+}
+.plant{
+    position:absolute;
+    background-Image: url('images/z1.png');
+    background-size: cover;
+    width:100px;
+    height:100px;
+    top:270px;
+    left:1028px;
+    border:1px solid black;
+    
+}
+.plant2{
+    position:absolute;
+    background-Image: url('images/z2.png');
+    background-size: cover;
+    width:100px;
+    height:100px;
+    top:270px;
+    left:1135px;
+    border:1px solid black;
+}
+.plant3{
+    position:absolute;
+    background-Image: url('images/z3.png');
+    background-size: cover;
+    width:100px;
+    height:100px;
+    top:270px;
+    left:1240px;
+    border:1px solid black;
+}
+.plant4{
+    position:absolute;
+    background-Image: url('images/z4.png');
+    background-size: cover;
+    width:100px;
+    height:100px;
+    top:375px;
+    left:1070px;
+    border:1px solid black;
+}
+.plant5{
+    position:absolute;
+    background-Image: url('images/z5.png');
+    background-size: cover;
+    width:100px;
+    height:100px;
+    top:375px;
+    left:1180px;
+    border:1px solid black;
+}
+#musicOn{
+    z-index: 2;
+    font-family: 'Bebas Neue', cursive;
+    font-size:20px;
+    position: absolute;
+    top:580px;
+    left:1141px;
+    padding:10px 20px 10px 20px;
+}
+#musicOff{
+    z-index:1;
+    font-family: 'Bebas Neue', cursive;
+    font-size:20px;
+    position: absolute;
+    top:580px;
+    left:1140px;
+    padding:10px 20px 10px 20px;
+}

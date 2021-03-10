@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants vs Zombies</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- declare audio -->
+    <audio id="sound">
+        <source src="sounds/background-music.mp3"/>
+    </audio>
+    <div id='background'>
+		<div id='zombies'></div>
+		<div id='plants'></div>
+		<div id='bullets'></div>
+	</div>
+    <div class="side-container">
+        <div class="banner"><a href=""><img src="images/bannertwo.png" alt=""></a></div>
+        <div class="fighter"><p class="chFighter">Choose your fighter!</p></div>
+        <!-- Fighters -->
+        <a href="#" class="fighters" title="Peashooter"><div class='plant'></div></a>
+        <a href="#" class="fighters" title="Fume-shroom"><div class='plant2'></div></a>
+        <a href="#" class="fighters" title="Repeater"><div class='plant3'></div></a>
+        <a href="#" class="fighters" title="Threepeater"><div class='plant4'></div></a>
+        <a href="#" class="fighters" title="Chomper"><div class='plant5'></div></a>
+        
+        <!-- AUDIO CONTROL -->
+        <button id="musicOn" onclick="playAudio()">Music:  On</button>
+        <button id="musicOff" onclick="stopAudio()">Music:Off</button>
+        <!-- Scoreboard -->
+        <div class="score"><img src="images/scoreboard.jpg" alt="" class="scoreboard"></div>
+        <p id="scorer">Score: 0</p>
+    </div>
+    
+<script>
+    var x = document.getElementById("sound"); 
+    // play audio
+    function playAudio() { 
+        x.play();
+        document.getElementById("musicOff").style.zIndex=2;
+        document.getElementById("musicOn").style.zIndex=1;
+    } 
+    // stop audio
+    function stopAudio() { 
+        x.pause();
+        document.getElementById("musicOff").style.zIndex=1;
+        document.getElementById("musicOn").style.zIndex=2;
+    } 
+
+</script>
+</body>
+</html>
