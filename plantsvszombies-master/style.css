@@ -54,7 +54,7 @@ img{
     height:100px;
     top:270px;
     left:1028px;
-    border:1px solid black;
+   
     
 }
 .plant2{
@@ -65,7 +65,6 @@ img{
     height:100px;
     top:270px;
     left:1135px;
-    border:1px solid black;
 }
 .plant3{
     position:absolute;
@@ -75,7 +74,6 @@ img{
     height:100px;
     top:270px;
     left:1240px;
-    border:1px solid black;
 }
 .plant4{
     position:absolute;
@@ -85,7 +83,6 @@ img{
     height:100px;
     top:375px;
     left:1070px;
-    border:1px solid black;
 }
 .plant5{
     position:absolute;
@@ -95,7 +92,6 @@ img{
     height:100px;
     top:375px;
     left:1180px;
-    border:1px solid black;
 }
 #musicOn{
     z-index: 2;

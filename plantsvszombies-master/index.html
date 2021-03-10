@@ -22,11 +22,11 @@
         <div class="banner"><a href=""><img src="images/bannertwo.png" alt=""></a></div>
         <div class="fighter"><p class="chFighter">Choose your fighter!</p></div>
         <!-- Fighters -->
-        <a href="#" class="fighters" title="Peashooter"><div class='plant'></div></a>
-        <a href="#" class="fighters" title="Fume-shroom"><div class='plant2'></div></a>
-        <a href="#" class="fighters" title="Repeater"><div class='plant3'></div></a>
-        <a href="#" class="fighters" title="Threepeater"><div class='plant4'></div></a>
-        <a href="#" class="fighters" title="Chomper"><div class='plant5'></div></a>
+        <a href="#" class="fighters" title="Peashooter" onclick="choosePlants('plant')"><div class='plant'></div></a>
+        <a href="#" class="fighters" title="Fume-shroom" onclick="choosePlants('plant2')"><div class='plant2'></div></a>
+        <a href="#" class="fighters" title="Repeater" onclick="choosePlants('plant3')"><div class='plant3'></div></a>
+        <a href="#" class="fighters" title="Threepeater" onclick="choosePlants('plant4')"><div class='plant4'></div></a>
+        <a href="#" class="fighters" title="Chomper" onclick="choosePlants('plant5')"><div class='plant5'></div></a>
         
         <!-- AUDIO CONTROL -->
         <button id="musicOn" onclick="playAudio()">Music:  On</button>
@@ -35,7 +35,7 @@
         <div class="score"><img src="images/scoreboard.jpg" alt="" class="scoreboard"></div>
         <p id="scorer">Score: 0</p>
     </div>
-    
+<script src="script.js"></script>
 <script>
     var x = document.getElementById("sound"); 
     // play audio
