@@ -43,6 +43,7 @@ function moveBullets(){
         if(bullets[i].y<0){
             bullets[i] = bullets[bullets.length-1];
             bullets.pop();
+            
         }
     }
 }
@@ -74,6 +75,9 @@ function collisionDetectionBullets(){
                 explosionEffect();
                 enemies.splice(j,1);
                 bullets.splice(i,1);
+                if(enemies.length==0){
+                    document.getElementById("youWon").style.opacity=1;
+                }
             }
         }
     }

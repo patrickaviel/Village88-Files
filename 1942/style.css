@@ -76,3 +76,12 @@ body{
     font-family: 'Lekton', sans-serif;
     opacity: 0;
 }
+#youWon{
+    position:absolute;
+    top:200px;
+    left:290px;
+    color:#f2f2f2;
+    font-size:90px;
+    font-family: 'Lekton', sans-serif;
+    opacity: 0;
+}
