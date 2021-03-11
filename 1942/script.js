@@ -3,14 +3,20 @@ var hero = {x:450,y:500};
 var enemies = [{x:100,y:50},{x:300,y:80},{x:500,y:10},{x:700,y:20},{x:900,y:80}];
 var bullets=[];
 var score=0;
-
+var motherShipHealth=100;
 function displayHero(){
     document.getElementById('hero').style['top']=hero.y+"px";
     document.getElementById('hero').style['left']=hero.x+"px";
     document.getElementById("scorer").innerText="Score: "+score;
 }
-
+function displayMotherShip(){
+    var mothership='';
+    mothership+="<div class='motherShip' style='top:-120px; left:290px;'></div>";
+    document.getElementById("mothership").innerHTML=mothership;
+    
+}
 function displayEnemies(){
+    //displayMotherShip();
     var output='';
     for(var i=0;i<enemies.length;i++){
         output+="<div class='enemy1' style='top:"+enemies[i].y+"px; left:"+enemies[i].x+"px;'></div>";
@@ -42,8 +48,7 @@ function moveBullets(){
         bullets[i].y-=5;
         if(bullets[i].y<0){
             bullets[i] = bullets[bullets.length-1];
-            bullets.pop();
-            
+            bullets.pop(); 
         }
     }
 }
@@ -51,7 +56,7 @@ function moveBullets(){
 function collisionDetectionShip(){
     for(var i=0;i<enemies.length;i++){
         if(Math.abs(enemies[i].x-hero.x)<10&&Math.abs(enemies[i].y-hero.y)<10){
-            console.log("Collision with Ship!");
+            //console.log("Collision with Ship!");
             document.getElementById("gameOver").style.opacity=1;
             document.getElementById("refresh").style.opacity=1;
             explosionEffect();
@@ -64,7 +69,27 @@ function collisionDetectionShip(){
             document.getElementById("explosion").innerHTML=destroy;
         }
     }
-    
+}
+
+function collisionWithMotherShip(){
+    if(enemies.length==0){
+        for(var i=0;i<bullets.length;i++){
+            if(Math.abs(bullets[i].x-490)<10&&Math.abs(bullets[i].y-60)<10){
+                score+=5;
+                motherShipHealth-=10;
+                bullets.splice(i,1);
+                var destroy='';
+                destroy+="<div class='explosionEffect' style='top:"+(100)+"px; left:"+(500)+"px;'></div>";
+                document.getElementById("explosion").innerHTML=destroy;
+                explosionEffect();
+            }
+            if(motherShipHealth==0){
+                document.getElementById("youWon").style.opacity=1;
+                document.getElementById("refresh").style.opacity=1;
+                document.getElementById("mothership").style.opacity=0;
+            }   
+        }
+    }
 }
 
 function collisionDetectionBullets(){
@@ -80,8 +105,9 @@ function collisionDetectionBullets(){
                 enemies.splice(j,1);
                 bullets.splice(i,1);
                 if(enemies.length==0){
-                    document.getElementById("youWon").style.opacity=1;
-                    document.getElementById("refresh").style.opacity=1;
+                    displayMotherShip();
+                    //document.getElementById("youWon").style.opacity=1;
+                    //document.getElementById("refresh").style.opacity=1;
                 }
             }
         }
@@ -148,8 +174,8 @@ function gameLoop(){
     fireBullets();
     collisionDetectionShip();
     collisionDetectionBullets();
+    collisionWithMotherShip();
 }
-
 setInterval(gameLoop,30);
 // displayHero();
 // displayEnemies();

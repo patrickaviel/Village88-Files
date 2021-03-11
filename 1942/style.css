@@ -1,14 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 *{
     margin:0;
     border:0;
 }
 
 body{
-    background-color:black;
+    background-color:#4B371C;
 }
-
+.banner{
+    cursor:pointer;
+    position: absolute;
+    top:0px;
+    left:1027px;
+    
+    padding:5px;
+    border-radius: 32px;
+}
+.instructions{
+    text-justify: auto;
+    font-family: 'DotGothic16', sans-serif;
+    color:white;
+    font-size:20px;
+    position: absolute;
+    top:150px;
+    left:1029px;
+    
+    padding:5px;
+    border-radius: 32px;
+    width:300px;
+}
+img{
+    height:100px;
+}
 #container{
     background: url('Images/bgv2.png');
     width:1000px;
@@ -16,10 +40,10 @@ body{
 }
 
 #hero{
-    background: url('Images/1942.gif');
-    background-position: -85px -180px;
-    width:28px;
-    height:28px;
+    background-image: url('Images/spaceship.gif');
+    background-size: cover;
+    width:50px;
+    height:50px;
     position:absolute;
 }
 
@@ -29,6 +53,15 @@ body{
     width:28px;
     height:28px;
     position:absolute;
+}
+
+.motherShip{
+    background-image: url('Images/plane.png');
+    background-size: cover;
+    width:450px;
+    height:250px;
+    position:absolute;
+    opacity: 1;
 }
 
 .bullet{
@@ -93,5 +126,8 @@ body{
     font-size:25px;
     font-family: 'Lekton', sans-serif;
     opacity: 0;
+}
+#enemies{
+    opacity:1;
 }
 
