@@ -6,7 +6,7 @@ var zombies=[
     {},
     {}
 ]
-var bullets=[{x:330,y:80}];
+var bullets=[{x:330,y:80},{x:330,y:190},{x:330,y:300},{x:330,y:410},{x:330,y:520}];
 
 function choosePlants(e){
     if(plants.length<5){
@@ -114,26 +114,37 @@ function displayPlants(selectedPlant){
     }
 }
 
-
+function startGame(){
+    loadWorld();
+}
 function drawBullets(){
-    console.log("This is buket");
+    //console.log("This is buket");
     var html = '';
     for(var i=0; i<bullets.length; i++){
         html += "<div class='bullet' style='top: "+bullets[i].y+"px; left:"+bullets[i].x+"px;' ></div>";
     }
     document.getElementById('bullets').innerHTML = html;
-    setInterval(fireBullets,50)
+    setInterval(moveBullets,200);
+}
+
+function loadWorld(){
+    drawBullets();
 }
 
 function moveBullets(){
     for(var i=0; i<bullets.length; i++){
-        bullets[i].x += 5;
-    }document.getElementById('bullets').innerHTML = html;
-    
+        if(bullets[i].x<1000){
+            bullets[i].x += 5;
+        }else{
+            bullets.pop();
+        }
+    }
+    drawBullets();
     // for(var i=0; i<bullets.length; i++){
     //     if(bullets[i].x > 1000){
     //         bullets[i] = bullets[bullets.length-1];
     //         bullets.pop();
     //     }
     // }
+   
 }

@@ -8,7 +8,8 @@
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onload="playAudio()">
+<body >
+    <!-- onload="playAudio()" -->
     <!-- declare audio -->
     <audio id="sound">
         <source src="sounds/background-music.mp3"/>
@@ -34,7 +35,7 @@
         <!-- Scoreboard -->
         <div class="score"><img src="images/scoreboard.jpg" alt="" class="scoreboard"></div>
         <p id="scorer">Score: 0</p>
-        <div id="startGame"onclick="drawBullets()"><img src="images/start-button.png" alt=""></div>
+        <div id="startGame"onclick="startGame()"><img src="images/start-button.png" alt=""></div>
         
     </div>
 
