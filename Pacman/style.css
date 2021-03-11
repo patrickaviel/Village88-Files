@@ -80,6 +80,14 @@ audio{
     background-size: cover;
     background-repeat: no-repeat;
 }   
+#ghost{
+    width:20px;
+    height:20px;
+    background-image: url(images/monster-brown.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:absolute;
+}
 .cherry{
     background-image: url(images/cherry.png);
     background-size: cover;
