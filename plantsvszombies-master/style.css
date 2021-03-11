@@ -112,3 +112,24 @@ img{
     left:1140px;
     padding:10px 20px 10px 20px;
 }
+#startGame{
+    opacity:0;
+    cursor:pointer;
+    z-index:1;
+    font-family: 'Bebas Neue', cursive;
+    font-size:20px;
+    position: absolute;
+    top:470px;
+    left:1060px;
+    padding:10px 20px 10px 20px;
+}
+#startGame img{
+    height:90px;
+}
+.bullet{
+    position:absolute;
+    background-image: url('images/bullet.png');
+    background-size: cover;
+    width:30px;
+    height:30px;
+}

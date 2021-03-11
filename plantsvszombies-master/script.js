@@ -2,6 +2,11 @@
 var plants=[];
 var counter=0;
 var output='';
+var zombies=[
+    {},
+    {}
+]
+var bullets=[{x:330,y:80}];
 
 function choosePlants(e){
     if(plants.length<5){
@@ -60,40 +65,29 @@ function displayPlants(selectedPlant){
         if(plants.length<=5){
             if(selectedPlant=="plant"){
                 output += "<div class='plant' style='top:"+(260)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant2"){
                 output += "<div class='plant2' style='top:"+(260)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant3"){
                 output += "<div class='plant3' style='top:"+(260)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant4"){
                 output += "<div class='plant4' style='top:"+(260)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant5"){
                 output += "<div class='plant5' style='top:"+(260)+"px; left:"+(250)+"px;'></div>";
-                
             }
             console.log(selectedPlant);
-            
         }
     }if(counter==4){
         if(plants.length<=5){
             if(selectedPlant=="plant"){
                 output += "<div class='plant' style='top:"+(360)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant2"){
                 output += "<div class='plant2' style='top:"+(360)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant3"){
-                output += "<div class='plant3' style='top:"+(360)+"px; left:"+(250)+"px;'></div>";
-                
+                output += "<div class='plant3' style='top:"+(360)+"px; left:"+(250)+"px;'></div>"; 
             }else if(selectedPlant=="plant4"){
                 output += "<div class='plant4' style='top:"+(360)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant5"){
                 output += "<div class='plant5' style='top:"+(360)+"px; left:"+(250)+"px;'></div>";
-                
             }
             console.log(selectedPlant);
             
@@ -102,23 +96,44 @@ function displayPlants(selectedPlant){
         if(plants.length<=5){
             if(selectedPlant=="plant"){
                 output += "<div class='plant' style='top:"+(460)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant2"){
                 output += "<div class='plant2' style='top:"+(460)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant3"){
                 output += "<div class='plant3' style='top:"+(460)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant4"){
                 output += "<div class='plant4' style='top:"+(460)+"px; left:"+(250)+"px;'></div>";
-                
             }else if(selectedPlant=="plant5"){
                 output += "<div class='plant5' style='top:"+(460)+"px; left:"+(250)+"px;'></div>";
-                
             }
             console.log(selectedPlant);
-            
         }
     }
     document.getElementById('plants').innerHTML = output;
+    if(counter==5){
+        document.getElementById('startGame').style.opacity=1; 
+    }
+}
+
+
+function drawBullets(){
+    console.log("This is buket");
+    var html = '';
+    for(var i=0; i<bullets.length; i++){
+        html += "<div class='bullet' style='top: "+bullets[i].y+"px; left:"+bullets[i].x+"px;' ></div>";
+    }
+    document.getElementById('bullets').innerHTML = html;
+    setInterval(fireBullets,50)
+}
+
+function moveBullets(){
+    for(var i=0; i<bullets.length; i++){
+        bullets[i].x += 5;
+    }document.getElementById('bullets').innerHTML = html;
+    
+    // for(var i=0; i<bullets.length; i++){
+    //     if(bullets[i].x > 1000){
+    //         bullets[i] = bullets[bullets.length-1];
+    //         bullets.pop();
+    //     }
+    // }
 }
