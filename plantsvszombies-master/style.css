@@ -38,6 +38,7 @@ img{
 }
 #scorer{
     position:absolute;
+    font-family: 'Bebas Neue', cursive;
     font-size: 30px;
     top:5px;
     left:895px;
