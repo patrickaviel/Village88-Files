@@ -85,3 +85,13 @@ body{
     font-family: 'Lekton', sans-serif;
     opacity: 0;
 }
+#refresh{
+    position:absolute;
+    top:320px;
+    left:275px;
+    color:#f2f2f2;
+    font-size:25px;
+    font-family: 'Lekton', sans-serif;
+    opacity: 0;
+}
+

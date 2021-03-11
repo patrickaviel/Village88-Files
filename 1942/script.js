@@ -53,6 +53,7 @@ function collisionDetectionShip(){
         if(Math.abs(enemies[i].x-hero.x)<10&&Math.abs(enemies[i].y-hero.y)<10){
             console.log("Collision with Ship!");
             document.getElementById("gameOver").style.opacity=1;
+            document.getElementById("refresh").style.opacity=1;
             explosionEffect();
             setTimeout(gameOverEffect,2000);
             hero.x=-1000;
@@ -73,10 +74,14 @@ function collisionDetectionBullets(){
                 console.log("Bullet",i, "and Enemy",j,"collided");
                 score+=5;
                 explosionEffect();
+                var destroy='';
+                destroy+="<div class='explosionEffect' style='top:"+(enemies[j].y)+"px; left:"+(enemies[j].x)+"px;'></div>";
+                document.getElementById("explosion").innerHTML=destroy;
                 enemies.splice(j,1);
                 bullets.splice(i,1);
                 if(enemies.length==0){
                     document.getElementById("youWon").style.opacity=1;
+                    document.getElementById("refresh").style.opacity=1;
                 }
             }
         }
