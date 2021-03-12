@@ -202,7 +202,24 @@ function replaceNegative(arr){
     return arr;
   }
 
-  //3.Create a function that changes a given array to list each original element twice, retaining original order. 
+  //3.Given an array, return an array with values in a reversed order.  For example, returnReversed([1,2,3]) should return [3,2,1].
+  function reverseArray(arr){
+    var temp=0;
+    for(var i=0;i<arr.length/2;i++){
+      temp = arr[i];
+      arr[i]=arr[arr.length-1-i];
+      arr[arr.length-1-i]=temp;
+    }
+    return arr;
+  }
+  
+  var myArray=[2,4,6,8,10];
+  var myArray2=[2,4,6,8,10,12];
+  
+  console.log(reverseArray(myArray));
+  console.log(reverseArray(myArray2));
+
+  //4.Create a function that changes a given array to list each original element twice, retaining original order. 
   //Have the function return the new array. For example repeatTwice( [4,”Ulysses”, 42, false] ) 
   //should return [4,4, “Ulysses”, “Ulysses”, 42, 42, false, false].
   function repeatArray(arr){

@@ -36,6 +36,33 @@ img{
     left:880px;
     
 }
+.scoreboard{
+    height:50px;
+}
+.plantscore{
+    z-index:0;
+    position: absolute;
+    top:0px;
+    left:50px;
+}
+.plantscoreboard{
+    height:50px;
+}
+
+.hangedZombie{
+    position:absolute;
+    width:100px;
+    height:100px;
+    top:50px;
+    left:5px;
+}
+.hangedZombie2{
+    position:absolute;
+    width:100px;
+    height:100px;
+    top:50px;
+    left:138px;
+}
 #scorer{
     position:absolute;
     font-family: 'Bebas Neue', cursive;
@@ -44,12 +71,17 @@ img{
     left:895px;
     color:#f2f2f2;
 }
-.scoreboard{
-    height:50px;
+#level1{
+    position:absolute;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    top:5px;
+    left:90px;
+    color:#f2f2f2;
 }
 .plant{
     position:absolute;
-    background-Image: url('images/z1.png');
+    background-Image: url('images/peashooter-gif.gif');
     background-size: cover;
     width:100px;
     height:100px;
@@ -60,7 +92,7 @@ img{
 }
 .plant2{
     position:absolute;
-    background-Image: url('images/z2.png');
+    background-Image: url('images/fumeshroom-gif.gif');
     background-size: cover;
     width:100px;
     height:100px;
@@ -69,7 +101,7 @@ img{
 }
 .plant3{
     position:absolute;
-    background-Image: url('images/z3.png');
+    background-Image: url('images/repeater-gif.gif');
     background-size: cover;
     width:100px;
     height:100px;
@@ -78,7 +110,7 @@ img{
 }
 .plant4{
     position:absolute;
-    background-Image: url('images/z4.png');
+    background-Image: url('images/z4-gif.gif');
     background-size: cover;
     width:100px;
     height:100px;
@@ -87,7 +119,7 @@ img{
 }
 .plant5{
     position:absolute;
-    background-Image: url('images/z5.png');
+    background-Image: url('images/chomper-gif.gif');
     background-size: cover;
     width:100px;
     height:100px;
@@ -132,4 +164,18 @@ img{
     background-size: cover;
     width:30px;
     height:30px;
+}
+.zombie{
+    position:absolute;
+    background-Image: url('images/zombie.gif');
+    background-size: cover;
+    width:100px;
+    height:100px;
+}
+.zombie2{
+    position:absolute;
+    background-Image: url('images/zombie-3.gif');
+    background-size: cover;
+    width:54px;
+    height:100px;
 }

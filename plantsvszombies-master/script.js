@@ -1,11 +1,13 @@
 // Variable Declaration
 var plants=[];
+var plantsInfo=[{damage:10},{damage:15},{damage:20},{damage:25},{damage:30}]
 var counter=0;
 var output='';
 var zombies=[
-    {},
-    {}
-]
+    {x: 930,y: 60,speed:1},
+    {x: 930,y: 260,speed:1}
+];
+var zombies2=[{x: 930,y: 150,speed:2,health:100},{x: 930,y: 350,speed:3,health:50}];
 var bullets=[{x:330,y:80},{x:330,y:190},{x:330,y:300},{x:330,y:410},{x:330,y:520}];
 
 function choosePlants(e){
@@ -115,8 +117,15 @@ function displayPlants(selectedPlant){
 }
 
 function startGame(){
-    loadWorld();
+    zombiesComing();
+    setInterval(drawZombies,100);
+    setInterval(moveEnemies,100);
+    
+    setInterval(drawBullets,100);
+    setInterval(moveBullets,100);
+    document.getElementById('startGame').remove();
 }
+
 function drawBullets(){
     //console.log("This is buket");
     var html = '';
@@ -124,11 +133,6 @@ function drawBullets(){
         html += "<div class='bullet' style='top: "+bullets[i].y+"px; left:"+bullets[i].x+"px;' ></div>";
     }
     document.getElementById('bullets').innerHTML = html;
-    setInterval(moveBullets,200);
-}
-
-function loadWorld(){
-    drawBullets();
 }
 
 function moveBullets(){
@@ -137,14 +141,42 @@ function moveBullets(){
             bullets[i].x += 5;
         }else{
             bullets.pop();
+            drawBullets();
         }
     }
-    drawBullets();
-    // for(var i=0; i<bullets.length; i++){
-    //     if(bullets[i].x > 1000){
-    //         bullets[i] = bullets[bullets.length-1];
-    //         bullets.pop();
-    //     }
-    // }
-   
+}
+
+function drawZombies(){
+    var html = '';
+    var zmbi='';
+    for(var i=0; i<zombies.length; i++){
+        html += "<div class='zombie' style='top:"+zombies[i].y+"px; left:"+zombies[i].x+"px;'></div>";
+        zmbi += "<div class='zombie2' style='top:"+zombies2[i].y+"px; left:"+zombies2[i].x+"px;'></div>";
+    }
+    document.getElementById('zombies').innerHTML = html;
+    document.getElementById('zombies2').innerHTML = zmbi;
+    console.log("spawn");
+}
+
+function moveEnemies(){
+    for(var i=0;i<zombies.length;i++){
+        if(zombies[i].x>0){
+            zombies[i].x-=zombies[i].speed;
+        }
+        if(zombies2[i].x>0){
+            zombies2[i].x-=zombies2[i].speed;
+        }
+    }
+    drawZombies();
+}
+
+function zombiesComing(){
+    var zombiesMp3 = new Audio("sounds/zombie-coming.mp3");
+    zombiesMp3.play();
+    setTimeout(zombiesGroan(),10000);
+}
+
+function zombiesGroan(){
+    var zombiesGroanMp3 = new Audio("sounds/zombie-groan-m.mp3");
+    zombiesGroanMp3.play();
 }
