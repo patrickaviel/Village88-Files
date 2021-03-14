@@ -9,14 +9,15 @@ var plantsInfo=[
     {damage:"",health:50,speed:0}
 ];
 
+var bulletSpawn=[100,200,300,400,500];
 var counter=0;
 
 var output='';
 
 var zombies=[
-    {x: 930,y: 60,speed:1},
-    {x: 1100,y: 60,speed:1},
-    {x: 930,y: 260,speed:1}
+    {x: 930,y: 60,speed:1,health:100},
+    {x: 1100,y: 60,speed:1,health:100},
+    {x: 930,y: 260,speed:1,health:100}
 ];
 
 var zombies2=[
@@ -25,13 +26,18 @@ var zombies2=[
     {x: 950,y: 450,speed:2,health:100}
     
 ];
+
 var bullets=[
-    {x:330,y:80},
-    {x:330,y:190},
-    {x:330,y:300},
-    {x:330,y:410},
-    {x:330,y:520}
+    // {x:330,y:80},
+    // {x:330,y:190},
+    // {x:330,y:300},
+    // {x:330,y:410},
+    // {x:330,y:520}
 ];
+
+var spawnBullet=[];
+
+var score=0;
 
 function choosePlants(e){
     if(plants.length<5){
@@ -160,32 +166,61 @@ function displayPlants(selectedPlant){
 
 function startGame(){
     zombiesComing();
-    setInterval(drawZombies,100);
+    //setInterval(drawZombies,100);
+    drawZombies();
     setInterval(moveEnemies,100);
-    setInterval(zombieBulletCollision,100);
-    setInterval(drawBullets,100);
-    setInterval(moveBullets,100);
-    document.getElementById('startGame').remove();
+    //setInterval(zombieBulletCollision,100);
+    setInterval(createBullet,2000);
+    //createBullet();
+    //drawBullets();
+    setInterval(drawBullets,50);
+    setInterval(moveBullets,50);
+    
+    //setInterval(moveBullets,30);
+    //document.getElementById('startGame').remove();
+}
+
+setInterval(zombieBulletCollision,20);
+function createBullet(){
+    for(var i=0; i<plantsInfo.length; i++){
+        bullets.push({
+            x: 320,
+            y:bulletSpawn[i]
+        });
+    }
 }
 
 function drawBullets(){
+    //console.log(bullets);
     //console.log("This is buket");
     var html = '';
     for(var i=0; i<bullets.length; i++){
         html += "<div class='bullet' style='top: "+bullets[i].y+"px; left:"+bullets[i].x+"px;' ></div>";
     }
     document.getElementById('bullets').innerHTML = html;
+    
 }
 
 function moveBullets(){
+    // for(var i=0; i<bullets.length; i++){
+    //     // if(bullets[i].x<1000){
+    //     //     bullets[i].x += 10;
+    //     // }else{
+    //     //     bullets[i].pop();
+    //     //     drawBullets();
+    //     // }
+    // }
     for(var i=0; i<bullets.length; i++){
-        if(bullets[i].x<1000){
-            bullets[i].x += 10;
-        }else{
+        bullets[i].x += 5;
+    }
+    
+    for(var i=0; i<bullets.length; i++){
+        if(bullets[i].x > 900){
+            bullets[i] = bullets[bullets.length-1];
             bullets.pop();
-            drawBullets();
         }
     }
+    
 }
 
 function drawZombies(){
@@ -197,44 +232,52 @@ function drawZombies(){
     }
     document.getElementById('zombies').innerHTML = html;
     document.getElementById('zombies2').innerHTML = zmbi;
-    console.log("spawn");
+    //console.log("spawn");
 }
 
 function moveEnemies(){
     for(var i=0;i<zombies.length;i++){
-        if(zombies[i].x>0){
+        if(zombies[i].x>320){
             zombies[i].x-=zombies[i].speed;
         }
-        if(zombies2[i].x>0){
+        if(zombies2[i].x>320){
             zombies2[i].x-=zombies2[i].speed;
         }
     }
     drawZombies();
 }
 function zombieBulletCollision(){
-    if((zombies[0].x==bullets[0].x)&&(zombies[0].y==bullets[0].y)){
-        console.log("x collision");
-    }
-    // console.log(zombies[0].x,bullets[0].x);
-    // for(var i=0;i<bullets.length;i++){
-    //     for(var j=0;j<zombies.length;j++){
-    //         //console.log(zombies[j].x);
-            // if(Math.abs(zombies[0].x-bullets[0].x)<10&&Math.abs(zombies[0].y-bullets[0].y)<10){
-            //     console.log("Collision Detected");
+    for(var i=0;i<bullets.length;i++){
+        for(var j=0;j<zombies.length;j++){
+            //console.log(bullets[i].x,zombies[j].x);
+            if(Math.abs(zombies[j].x-bullets[i].x)<20){
+                bullets[i] = bullets[bullets.length-1];
+                bullets.pop();
+                zombies[j].health-=10;
+                if(zombies[j].health==0){
+                    zombies[j] = zombies[zombies.length-1];
+                    zombies.pop();
+                    score+=10;
+                }
+                console.log(zombies[j].health)
+                //console.log("Collision Detected");
+            }
+            // if(Math.abs(zombies2[j].x-bullets[i].x)<20){
+            //     bullets[i] = bullets[bullets.length-1];
+            //     bullets.pop();
+            //     zombies2[j].health-=10;
+            //     if(zombies2[j].health==0){
+            //         zombies2.pop(zombies2[j]);
+            //         score+=10;
+            //     }
+            //     console.log(zombies2[j].health)
+            //     //console.log("Collision Detected");
             // }
-    //         if((zombies[j].x==bullets[i].x)&&(zombies[j].y==bullets[i].y)){
-    //             console.log("x collision");
-    //         }
-    //     }
-    //     for(var k=0;k<zombies2.length; k++){
-    //         // if(Math.abs(zombies2[k].x-bullets[i].x)<10&&Math.abs(zombies2[k].y-bullets[i].y)<10){
-    //         //     console.log("Collision Detected");
-    //         // }
-    //     }
-        
-    // }
-    
-}
+        }
+    }     
+    document.getElementById('scorer').innerText = "Score: "+score;
+} 
+
 function zombiesComing(){
     var zombiesMp3 = new Audio("sounds/zombie-coming.mp3");
     zombiesMp3.play();
@@ -244,4 +287,20 @@ function zombiesComing(){
 function zombiesGroan(){
     var zombiesGroanMp3 = new Audio("sounds/zombie-groan-m.mp3");
     zombiesGroanMp3.play();
+}
+
+function spawnBullets(){
+    bullets.push({x:hero.x+7,y:hero.y-10});
+    for(var i=0;i<bullets.length;i++){
+        spawnBullets.push(bullets[i].x,bullets[i].y);
+    }
+}
+
+function fireBullets(){
+    for(var i=0; i<plants.length; i++){
+        bullets.push({
+            x: plants[i].x*80+300,
+            y: plants[i].y*100+85
+        });
+    }
 }
