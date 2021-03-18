@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Registration Form</title>
+        <meta name="author" content="Patrick Peralta">
+        <meta name="description" content="Fill-up the neccessary fields in order to register your account" >
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="my_css_file.css">
+        <script src="my_javascript_library.js"></script>
+        <script src="another_javascript_file.js"></script> -->
+        <style>
+            *{
+                font-family: 'Ubuntu', sans-serif;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1>Registration Form</h1>
+            <form method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="first_name">First Name:</label></td>
+                            <td><input type="text" id="first_name" name="first_name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="last_name">Last Name:</label></td>
+                            <td><input type="text" id="last_name" name="last_name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email_address">Email Address:</label></td>
+                            <td><input type="text" id="email_address" name="email_address"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password:</label></td>
+                            <td><input type="password" id="password" name="password"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pw_confirmation">Confirm Password:</label></td>
+                            <td><input type="password" id="pw_confirmation" name="password_confirmation"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="birthday">Birthday:</label></td>
+                            <td><input type="date" id="birthday" name="birthday" ></td>
+                        </tr>
+                        <tr>
+                            <td>Gender:</td>
+                            <td><input type="radio" id="male" name="gender" value="male">Male</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="radio" id="female" name="gender" value="female">Female</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="radio" id="prefer_not_said" name="gender" value="prefer_not_said">Prefer not to say</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <label for="description">A short description about myself:</label><br>
+                <textarea name="description" id="description"  rows="4" cols="45" style="resize:none"></textarea>
+                <br>
+                <table>
+                    <tr>
+                        <td>Favorite Language:</td>
+                        <td><select name="gender">
+                                <option value="javascript">Javascript</option>
+                                <option value="cobol">COBOL</option>
+                                <option value="assembly">Assembly</option>
+                                <option value="pyhton">Python</option>
+                                <option value="java">Java</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table><br>
+                <input type="checkbox" id="black" name="color" value="black"> Yes, I would like to receive periodic email updates.
+                <br><br>
+                <input type="submit" value="Create Account">
+
+            </form>
+        </div>
+    </body>
+</html>

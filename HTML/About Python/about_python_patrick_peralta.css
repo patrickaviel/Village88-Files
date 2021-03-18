@@ -1,0 +1,192 @@
+*{
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    font-family:  sans-serif;
+}
+.main-container{
+    padding:10px;
+    background-color:#265174;
+    width:970px;
+    /* height:200px; */
+    margin: 0 auto;
+}
+span{ 
+    color:black;
+}
+    
+    .main-container p{
+    text-align:right;
+    color:white;
+    margin-right:40px;
+    font-size:15px;
+    }
+    .main-container a{
+        color:#ffde54;
+        }
+    .main-container .header{
+        height:100px;
+    }
+    .main-container .header img{
+        width:300px;
+        display:inline;
+    }
+    
+    .main-container .header a{
+        padding:5px;
+        display:inline-block;
+        text-align:right;
+        color:white;
+        background-color: #265174;
+        margin-left:20px;
+        text-decoration: none;
+        border-radius: 5px;
+        border:2px solid #b1bcc4;
+    }
+    .main-container .header input{
+        display:inline-block;
+        width:120px;
+        height:25px;
+        text-align: center;
+    }
+    .main-container .header .search-bar{
+        width:190px;
+        padding:10px 15px 10px 50px;
+        background-color: #444444;
+        border-radius: 15px;  
+        position: relative;
+        top:-75px;
+        left:710px;
+        box-shadow: 1px 3px black;
+    }
+    .main-container .nav-bar{
+        text-align: center;
+        width:800px;
+        padding:10px;
+        background-color: #4a7faa;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 1px 3px black;
+    }
+        .main-container .nav-bar ul{
+            margin:auto;
+          
+        }     
+        .main-container .nav-bar ul li{
+            padding: 0 20px;
+            list-style: none; 
+            display: inline;
+            color:white;
+            text-align: center;
+            font-size:18px;
+        }      
+        .main-container .nav-bar ul li a{
+            text-decoration: none;
+            color:white;
+        } 
+        .main-container .main-section{
+            height:300px;
+            width:800px;
+            padding:15px;
+
+            margin: 20px auto;
+         }
+         .main-container .main-section p{
+            font-size:15px;
+            text-align: center;
+            width:555px;
+            display: inline-block; 
+            vertical-align:top;
+         }
+            .main-container .main-section .side-bar{
+            color:white;
+            text-align: center;
+            width:200px;
+            height:250px;
+            display:inline-block;
+            }
+                .main-container .main-section .side-bar ul li{
+                    margin-top:10px;
+                    list-style-type: none;
+                    line-height: 25px;
+                }
+                .main-container .main-section .side-bar ul li a{
+                    color:white;
+                    text-decoration: underline;
+                }
+         .main-container .main-section .quotes{
+            line-height: 40px;
+            position: relative;
+            top:-140px;
+            left:210px;
+            font-size:19px;
+         }
+            .main-container .main-section .quotes p{
+                font-size:18px;
+                font-style:italic;
+                color:#ffde54;
+            }
+            .main-container .main-section .quotes h4{
+                color:white;
+                width:555px;
+                text-align:center;
+            }
+
+.division{
+    margin:0 auto 5px auto;
+    width:970px;
+    background-color:white;
+    padding:10px 10px 30px 10px;
+    text-align:center;
+}
+    .division .getting-started{
+        width:400px;
+        height:200px;
+        border-top: 5px solid #74a9d4;
+        display: inline-block;
+        vertical-align:top;
+        
+    }
+        .division .getting-started p{
+            margin:5px auto 0 auto;
+            width:300px;
+        }
+        .division .getting-started ul{
+            color:#457dac;
+            width:270px;
+            margin:0 auto;
+            list-style-type: square;
+        }
+        .division .getting-started ul li{
+            font-size:15px;
+        }
+        .division .getting-started p span{
+            color:#74a9d4;
+            font-size:14px;
+        }
+footer{
+    margin:0 auto;
+    width:970px;
+    background-color:#265174;
+    padding:50px 10px 10px 10px;
+    text-align:center;
+} 
+footer ul{
+    list-style-type: none;
+}
+footer ul li{
+    display:inline;
+    margin: 30px 20px 0px 20px;
+    color:#6ea3d0;
+}
+footer p{
+    font-size:10px;
+    color:#6ea3d0;
+    padding-top:15px ;
+}
+         

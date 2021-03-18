@@ -1,0 +1,215 @@
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+    font-family:sans-serif;
+}
+.main-container{
+    padding-top: 50px;
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+}
+.main-container header img{
+    width: 110px;
+    position: absolute;
+    top: 26px;
+}
+.main-container header h1{
+    margin-left: 112px;
+    font-size: 60px;
+    display: inline;
+    vertical-align: middle;
+}
+.main-container header h1 span{
+    color:#23669f;
+}
+.main-container header h2{
+    font-size: 40px;
+    color:white;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+    padding: 20px 20px;
+}
+.main-container .main-content{
+    width: 100%;
+    background: #FFFFFF;
+    background: -webkit-linear-gradient(bottom, #FFFFFF, #F6F6F6);
+    background: -moz-linear-gradient(bottom, #FFFFFF, #F6F6F6);
+    background: linear-gradient(to top, #FFFFFF, #F6F6F6);
+    /* background-color: greenyellow; */
+}
+.main-container .main-content .side-bar{
+    width: 250px;
+    height: 450px;
+    display: inline-block;
+}
+.main-container .main-content .side-bar h3{
+    padding-top: 30px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+.main-container .main-content .side-bar h3 span{
+    color:red;
+}
+.main-container .main-content .side-bar p{
+    padding-top: 15px;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.main-container .main-content .side-bar p span{
+    color:#23669f;
+}
+.main-container .main-content .side-bar a{
+   
+    text-align: center;
+    display: block;
+    color:white;
+    text-decoration: none;
+    width: 230px;
+    
+    padding: 10px 0;
+}
+.watch{
+    background-color:#5189b9;
+    filter: drop-shadow(3px 3px 4px black);
+    margin: 50px auto 10px auto;
+    border-radius: 5px;
+}
+.more{
+    background-color:#ef7d00;
+    filter: drop-shadow(3px 3px 4px black);
+    margin: 10px auto 30px auto;
+    border-radius: 5px;
+}
+.learn{
+    background-color:#06c5df;
+    filter: drop-shadow(3px 3px 4px black);
+    border-radius: 5px;
+}
+.ads{
+    border-top: 1px solid black;
+    height: 200px;
+    padding-top: 50px;
+    margin-top: 60px;
+}
+.ads .ad{
+    text-align: center;
+    margin-top: 10px;
+   background-image: url('images/ad_background.png');
+   height: 420px;
+}
+.ads .ad h2{
+    padding-top: 30px;
+    color:white;
+    text-align: center;
+    font-size: 30px;
+}
+.ads .ad img{
+    height: 150px;
+    margin: 20px auto;
+}
+.ads .ad a{
+    margin: 0 auto;
+}
+.main-section{
+    padding: 0 10px;
+    vertical-align: top;
+}
+.main-section .intro-section{
+    width: 920px;
+    height: 70px;
+}
+.main-section .intro-section .DNS{
+    position: relative;
+    top: -730px;
+    left: 300px;
+}
+.main-section .intro-section .DNS img{
+    height: 20px;
+}
+.main-section .intro-section .DNS p{
+    display: inline;
+}
+.main-section .intro-section .contact-info{
+    width: 300px;
+    position: relative;
+    top: -765px;
+    left: 960px;
+}
+.main-section .intro-section .contact-info img{
+    height: 40px;
+    position: absolute;
+    top: 5px;
+}
+.main-section .intro-section .contact-info p{
+    display: block;
+    text-align: center;   
+    font-size: 10px;
+    width: 260px;
+}
+.main-section .intro-section .contact-info p span{
+    color: #00c0df;
+    font-size: 25px;
+}
+.main-section .article-section{
+    line-height: 25px;
+    position: absolute;
+    top: 280px;
+    left: 389px;
+    width: 860px;
+    border-top: 1px solid black;
+    padding-top: 5px;
+}
+.main-section .article-section h2{
+    color:#23669f;
+}
+.main-section .article-section ul{
+    margin-left: 50px;
+}
+.main-section .article-section img{
+    width: 350px;
+    margin: 10px auto;
+    display: block;
+}
+.main-section .article-section ol{
+    margin-left: 50px;
+}
+.main-section .article-section span{
+    color:#00c0df;
+}
+.big-3{
+    margin-top: 20px;
+    padding: 10px;
+    width: 832px;
+    height: 110px;
+    text-align: left;
+    border: 5px solid #23669f;
+}
+.main-section .article-section .big-3 img{
+    width: 120px;
+    height: 110px;
+    margin: 0;
+}
+.main-section .article-section .big-3 h2{
+    display: inline;
+}
+.main-section .article-section .big-3 .content{
+    position:absolute;
+    top: 560px;
+    left: 180px;
+    width: 660px;
+}
+.main-section .article-section .big-3 .content p{
+    margin-bottom: 10px;
+}
+.main-section .article-section .big-3 .content a{
+    text-decoration: none;
+    color:#00c0df;
+}
