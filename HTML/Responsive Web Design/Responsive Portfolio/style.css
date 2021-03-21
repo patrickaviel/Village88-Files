@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: sans-serif;
+}
+.main-container{
+    background-color:#6f5965;
+}
+header{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff9fa;
+}
+header h1{
+    padding: 0.9rem;
+    display: block;
+}
+.main-container .about img{
+    display: block;
+    margin: 50px auto;
+    width: 60vw;
+    border: 1px solid #c4bebb;
+}
+.about-me{
+    margin: 30px auto;
+    background-color:#e9dfe8;
+    padding-bottom: 10px;
+    width: 90vw;
+}
+.about-me h2{
+   background-color:#8f8d98;
+   font-family: sans-serif;
+   padding: 5px 10px;
+   color:#fff9fa;
+}
+.about-me p{
+    padding: 10px;
+}
+.about-me a{
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.projects{
+    background-color:#6f5965;
+    display: block;
+    width: 90vw;
+    margin: 60px auto;
+}
+.projects .project{
+    margin: 30px auto;
+    background-color:#e9dfe8;
+    padding-bottom: 10px;
+    width: 90vw;
+}
+.projects h2{
+    background-color:#8f8d98;
+    font-family: sans-serif;
+    padding: 5px 10px;
+    color:#fff9fa;
+ }
+.projects p{
+    padding: 10px;
+}
+.projects a{
+    text-decoration: none;
+    color:white;
+    background-color:#42775e;
+    margin: auto;
+    padding: 5px;
+    width: 8rem;
+    text-align: center;
+    display: block;
+}
+footer{
+    background-color:#f9f9f9;
+    display: block;
+    text-align: center;
+}
+footer img{
+    vertical-align: middle;
+}
+footer ul{
+    list-style-type: none;
+}
+
+@media only screen and (max-width:480px){
+    h1{
+        margin:auto;
+    }
+    .sml{
+        display:none;
+    }
+    .tech{
+        font-size:1rem;
+    }
+    .projects img{
+        margin:6px;
+        width:12%;
+    }
+    footer {
+        padding:10px;
+    }
+    footer img{
+        width:5%;
+    }
+    footer ul li{
+        margin:10px;
+    }
+    footer ul li p{
+        padding-left:100px;
+    }
+}
+@media only screen and (min-width:481px){
+    .sml{
+        display:none;
+    }
+    .projects img{
+        margin:6px;
+        width:12%;
+    }
+    footer {
+        padding:10px;
+    }
+    footer img{
+        width:5%;
+    }
+    footer ul li{
+        margin:10px;
+    }
+    footer ul li p{
+        padding-left:100px;
+    }
+}
+@media only screen and (min-width:1024px){
+    .main-container header{
+        padding:1vw 0;
+    }
+    .main-container header h1{
+        text-align:left;
+        display:inline;
+    }
+    .main-container header p{
+        /* width:300px; */
+        margin-left: 50vw;
+        display:inline;
+        font-size:1.5vw;
+    }
+    .lg{
+        width:50%;
+        font-weight: bold;
+    }
+    .about{
+        text-align:center ;
+    }
+    .main-container .about img{
+        
+        margin: 30px auto;
+        max-width:46%;
+        border:1px solid #c4bebb;
+        display:inline-block;
+        vertical-align:top;
+    }
+    .about-me{
+        text-align: left;
+        vertical-align:top;
+        display:inline-block;
+        margin:30px auto;
+        background-color:#e9dfe8;
+        padding-bottom:10px;
+        width:40%;
+        max-height:50vh;
+    }
+    .sml{
+        display:block;
+    }
+    .project .sml{
+        min-width:100%;
+        margin:0;
+    }
+    .project p{
+        height:20vh;
+        padding:20px 10px 30px 10px;
+    }
+    .projects .project .technologies img{
+        margin:6px;
+        width:12%;
+    }
+    .projects{
+        padding:0;
+    }
+    .projects .project{
+        
+        width:30%;
+        display:inline-block;
+        vertical-align:top;
+        margin-left:3%;
+        height:100vh;
+    }
+
+    footer{
+        height: 55px;
+        background-color:white;
+        text-align:center;
+        padding:8px 10px;
+    }
+    footer p{
+        margin-bottom: 10px;
+    }
+    footer ul li{
+        display:inline;
+        list-style-type:none;
+    }
+    footer ul li img{
+        vertical-align:middle;
+        margin:5px;
+        width:20px;
+        height:20px;
+    }
+    footer ul li a{
+        color:black;
+        font-style: italic;
+    }
+}

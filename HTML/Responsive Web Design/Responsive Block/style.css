@@ -1,0 +1,124 @@
+*{
+    font-family: sans-serif;
+}
+h1,p{
+    margin:0px;
+    padding:0px;
+}
+h1{
+    padding-top:2rem;
+    padding-left:1rem;
+}
+.main-container{
+    background-color:#f2f2f2;
+    padding:10px;
+}
+.header{
+    background-color:green;
+    height: 110px;
+    width: 100%;
+}
+.side-bar{
+    margin-top:10px;
+    display:inline-block;
+    width:25%;
+    height:30rem;
+    background-color:blue;
+}
+.main-bar{
+    text-align: center;
+    display:inline-block;
+    margin-left:12px;
+    margin-top:10px;
+    width:73.5%;
+    
+    background-color:red;
+    vertical-align: top;
+}
+.main-bar .block-1{
+    margin:15px 10px;
+    width:30%;
+    height:20rem;
+    background-color:yellow;
+    display:inline-block;
+    vertical-align:top;
+}
+.main-bar .block-2{
+    margin-top:5px;
+    width:95%;
+    height:7rem;
+    background-color:purple;
+    display:inline-block;
+    vertical-align:top;
+}
+
+@media only screen and (max-width:480px){
+    .sm-0{
+        display:none;
+    }
+    .main-bar .block-1{
+     display:block;
+     width:90%;
+     margin:15px auto ;
+     height:10rem;
+    }
+    .main-bar{
+        width:100%;
+        margin-left:0;
+        display:block;
+        padding-top:5px;
+    }
+    .main-bar .block-2{
+        width:90%;
+        margin:10px auto ;
+    }
+}
+@media only screen and (min-width:481px){
+    .sm-0{
+        display:none;
+    }
+    .main-bar{
+        width:100%;
+        margin-left:0;
+        text-align: justify;
+    }
+    .main-bar .block-1{
+        display:inline-block;
+        width:45%;
+        height:10rem;
+        margin:15px 1rem;
+       }
+    .main-bar .block-2{
+        margin:15px 2%;
+    }
+}
+@media only screen and (min-width:1024px){
+    .sm-0{
+        display:inline-block;
+        width:25%;
+    }
+    .main-bar{
+        text-align: center;
+        display:inline-block;
+        margin-left:10px;
+        margin-top:10px;
+        width:73.5%;
+        
+        vertical-align: top;
+    }
+    .main-bar .block-1{
+        margin:15px 10px;
+        width:30%;
+        height:20rem;
+        display:inline-block;
+        vertical-align:top;
+    }
+    .main-bar .block-2{
+        margin-top:5px;
+        width:95%;
+        height:7rem;
+        display:inline-block;
+        vertical-align:top;
+        margin-bottom:0.9rem;
+    }
+}
